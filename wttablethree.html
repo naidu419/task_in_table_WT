@@ -1,0 +1,207 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Pricing Plans</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    font-family: 'Inter', sans-serif;
+    background: #f0f4ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 3rem 1rem;
+    background-image:
+      radial-gradient(circle at top left, #eaffff, transparent 100px),
+      radial-gradient(circle at bottom right, #e6e8fe, transparent 250px);
+  }
+  .pricing-wrapper {
+    display: flex;
+    gap: 2rem;
+    max-width: 1100px;
+    width: 100%;
+  }
+  .card {
+    background: #fff;
+    border-radius: 0.75rem;
+    box-shadow:
+      0 4px 12px rgba(99, 99, 99, 0.1),
+      0 1px 3px rgba(0, 0, 0, 0.06);
+    flex: 1 1 0;
+    padding: 2rem 1.75rem 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    min-width: 260px;
+  }
+  .card h2 {
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: #212121;
+    margin-bottom: 0.25rem;
+  }
+  .card span.subtitle {
+    font-size: 0.85rem;
+    color: #7a7a7a;
+    margin-bottom: 1.25rem;
+    letter-spacing: 0.05em;
+  }
+  .price-wrap {
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: baseline;
+    gap: 0.25rem;
+    color: #4b3d99;
+  }
+  .price {
+    font-weight: 900;
+    font-size: 1.8rem;
+  }
+  .per-month {
+    font-weight: 400;
+    font-size: 1rem;
+    color: #444;
+  }
+  .business .price {
+    color: #f2655a;
+  }
+  .enterprise .price {
+    color: #4b3d99;
+  }
+  ul.features {
+    list-style: none;
+    color: #555555;
+    font-size: 0.9rem;
+    margin-bottom: 1.75rem;
+    width: 100%;
+  }
+  ul.features li {
+    padding: 0.45rem 0;
+    border-bottom: 1px dotted #ddd;
+    text-align: center;
+    max-width: 280px;
+    margin: 0 auto;
+  }
+  ul.features li:last-child {
+    border-bottom: none;
+  }
+  .illustration {
+    width: 100%;
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+  }
+  .illustration img {
+    max-width: 100%;
+    height: auto;
+  }
+  button.read-more {
+    background-color: #4b3d99;
+    border-radius: 2rem;
+    padding: 0.65rem 2.5rem;
+    font-weight: 600;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 1rem;
+    box-shadow:
+      0 6px 12px rgba(75, 61, 153, 0.24);
+    transition: background-color 0.3s ease;
+  }
+  .business button.read-more {
+    background-color: #f2655a;
+    box-shadow: 0 6px 12px rgba(242, 101, 90, 0.24);
+  }
+  .read-more:hover {
+    filter: brightness(0.9);
+  }
+  .price-amount {
+    font-weight: 900;
+  }
+
+  @media (max-width: 900px) {
+    .pricing-wrapper {
+      flex-direction: column;
+      gap: 1.5rem;
+      max-width: 400px;
+      margin: auto;
+    }
+  }
+</style>
+</head>
+<body>
+<div class="pricing-wrapper" role="region" aria-label="Pricing Plans">
+  <article class="card personal" tabindex="0" aria-labelledby="personal-title">
+    <h2 id="personal-title">Personal</h2>
+    <span class="subtitle">We Think Ahead</span>
+    <div class="price-wrap">
+      <span class="price price-amount" aria-label="Price twenty nine dollars">$29</span>
+      <span class="per-month"><b>/month</b></span>
+    </div>
+    <ul class="features" aria-label="Features for Personal plan">
+      <li>Mobile-Optimized</li>
+      <li>Free Custom Domain</li>
+      <li>Best Web Hosting</li>
+      <li>Outstanding Support Team</li>
+      <li>Our Happy Customers</li>
+    </ul>
+    <div class="illustration" aria-hidden="true">
+      <img src="wt31.png" />
+    </div>
+    <button class="read-more" type="button" aria-label="Read more about personal plan">READ MORE</button>
+  </article>
+
+  <article class="card business" tabindex="0" aria-labelledby="business-title">
+    <h2 id="business-title">Business</h2>
+    <span class="subtitle">Special Offer</span>
+    <div class="price-wrap">
+      <span class="price price-amount" aria-label="Price thirty eight dollars" style="color:#f2655a;">$38</span>
+      <span class="per-month"><b>/month</b></span>
+    </div>
+    <ul class="features" aria-label="Features for Business plan">
+      <li>Mobile-Optimized</li>
+      <li>Free Custom Domain</li>
+      <li>Best Web Hosting</li>
+      <li>Outstanding Support Team</li>
+      <li>Our Happy Customers</li>
+    </ul>
+    <div class="illustration" aria-hidden="true">
+      <img src="wt32.png" />
+    </div>
+    <button class="read-more" type="button" style="background-color:#f2655a;" aria-label="Read more about business plan">READ MORE</button>
+  </article>
+
+  <article class="card enterprise" tabindex="0" aria-labelledby="enterprise-title">
+    <h2 id="enterprise-title">Enterprise</h2>
+    <span class="subtitle">Our Best Solution</span>
+    <div class="price-wrap">
+      <span class="price price-amount" aria-label="Price seventy five dollars">$75</span>
+      <span class="per-month"><b>/month</b></span>
+    </div>
+    <ul class="features" aria-label="Features for Enterprise plan">
+      <li>Mobile-Optimized</li>
+      <li>Free Custom Domain</li>
+      <li>Best Web Hosting</li>
+      <li>Outstanding Support Team</li>
+      <li>Our Happy Customers</li>
+    </ul>
+    <div class="illustration" aria-hidden="true">
+      <img src="wt3.png" />
+    </div>
+    <button class="read-more" type="button" aria-label="Read more about enterprise plan">READ MORE</button>
+  </article>
+</div>
+</body>
+</html>
